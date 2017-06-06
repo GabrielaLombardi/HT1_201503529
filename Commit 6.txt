@@ -1,0 +1,12 @@
+1. ¿Que entiendo por commit?
+	- Es la acción de almacenar y dar por hecho un cambio efectuado en la aplicacion.
+
+2. ¿Que entiendo por merge?
+	- A combinar o fusionar dos elementos con propiedades en comun. Como por ejemplo dos ramas.
+
+3. Diferencia entre pull y push
+	- Pull: Funciona para actualizar el repositorio.
+	- Push: Funciona para subir la rama o el commit mas reciente.
+
+4. ¿Como utilizar ramas?
+	- Son utilizadas para desarrollar funciones aisladas unas de otras.
