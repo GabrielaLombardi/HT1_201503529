@@ -25,6 +25,7 @@ public class VentanaUnica extends javax.swing.JFrame implements ActionListener{
         jButton2.addActionListener(this);
         jButton1.addActionListener(this);
         jButton3.addActionListener(this);
+        jButton4.addActionListener(this);
     }
 
     /**
@@ -234,6 +235,17 @@ public class VentanaUnica extends javax.swing.JFrame implements ActionListener{
             nombre = invertir(nombre);
             apellido = invertir(apellido);
             jLabel4.setText(nombre + " " + apellido);
+        }
+        
+        // Se aplicara la regla de 3 directa
+        if (ae.getSource() == jButton4){
+            double a = Double.parseDouble(jTextField1.getText().toString());
+            double b = Double.parseDouble(jTextField2.getText().toString());
+            double c = Double.parseDouble(jTextField3.getText().toString());
+            double d = c*b/a;
+            DecimalFormat formato = new DecimalFormat("###,###.##");
+            jLabel4.setText(String.valueOf(a) + " es a " + String.valueOf(b) +
+                            " como " + String.valueOf(c) + " es a " + String.valueOf(d));
         }
     }
     
