@@ -23,6 +23,7 @@ public class VentanaUnica extends javax.swing.JFrame implements ActionListener{
         initComponents();
         
         jButton2.addActionListener(this);
+        jButton1.addActionListener(this);
     }
 
     /**
@@ -210,5 +211,24 @@ public class VentanaUnica extends javax.swing.JFrame implements ActionListener{
                 JOptionPane.showMessageDialog(this, "Debe ingresar solo numeros");
             }
         }
+        
+        // Se verifica que la palabra ingresada contenga las 5 vocales
+        if (ae.getSource() == jButton1){
+            String palabra = jTextField1.getText().toString();
+            if ((verificarVocal(palabra, "a") || verificarVocal(palabra, "á")) &&
+                 (verificarVocal(palabra, "e") || verificarVocal(palabra, "é")) &&
+                    (verificarVocal(palabra, "i") || verificarVocal(palabra, "í")) &&
+                        (verificarVocal(palabra, "o") || verificarVocal(palabra, "ó")) &&
+                            (verificarVocal(palabra, "u") || verificarVocal(palabra, "ú")))
+                jLabel4.setText("Respuesta: CUMPLE");
+            else
+                jLabel4.setText("Respuesta: NO CUMPLE");
+        }
+    }
+    
+    private boolean verificarVocal(String cadena, String vocal){
+        if (cadena.contains(vocal))
+            return true;
+        return false;
     }
 }
