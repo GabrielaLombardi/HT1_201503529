@@ -24,6 +24,7 @@ public class VentanaUnica extends javax.swing.JFrame implements ActionListener{
         
         jButton2.addActionListener(this);
         jButton1.addActionListener(this);
+        jButton3.addActionListener(this);
     }
 
     /**
@@ -224,11 +225,30 @@ public class VentanaUnica extends javax.swing.JFrame implements ActionListener{
             else
                 jLabel4.setText("Respuesta: NO CUMPLE");
         }
+        
+        // Se invierte el orden de los caracteres ingresados
+        if (ae.getSource() == jButton3){
+            String nombre = jTextField1.getText().toString();
+            String apellido = jTextField2.getText().toString();
+            
+            nombre = invertir(nombre);
+            apellido = invertir(apellido);
+            jLabel4.setText(nombre + " " + apellido);
+        }
     }
     
     private boolean verificarVocal(String cadena, String vocal){
         if (cadena.contains(vocal))
             return true;
         return false;
+    }
+    
+    private String invertir(String cadena){
+        String invertida = "";
+        
+        for(int pos = cadena.length() - 1; pos >= 0; pos--)
+            invertida += cadena.charAt(pos);
+            
+        return invertida;
     }
 }
