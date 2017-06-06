@@ -234,7 +234,7 @@ public class VentanaUnica extends javax.swing.JFrame implements ActionListener{
             
             nombre = invertir(nombre);
             apellido = invertir(apellido);
-            jLabel4.setText(nombre + " " + apellido);
+            jLabel4.setText(nombre + " " + apellido + " _#201503529");
         }
         
         // Se aplicara la regla de 3 directa
